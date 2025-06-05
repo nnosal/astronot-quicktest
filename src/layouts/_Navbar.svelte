@@ -93,7 +93,7 @@
           <NavLi href="{withBase(``)}">Accueil</NavLi>
           <NavLi href="{withBase(`blog`)}">Blog</NavLi>
 
-          <NavLi href="{withBase(`contact`)">Contact</NavLi>
+          <NavLi href="{withBase(`contact`)}">Contact</NavLi>
           <NavLi href="https://github.com/nnosal" target="_blank"
             >Github</nnosal
           >
