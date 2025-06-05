@@ -95,7 +95,7 @@
 
           <NavLi href="{withBase(`contact`)}">Contact</NavLi>
           <NavLi href="https://github.com/nnosal" target="_blank"
-            >Github</nnosal
+            >Github/nnosal
           >
         </NavUl>
         <DarkMode btnClass="ml-4 text-white" size="lg" />
