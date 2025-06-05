@@ -25,8 +25,9 @@
     h2Class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
     pClass="text-gray-500 sm:text-xl dark:text-gray-400"
   >
-    <svelte:fragment slot="h2">Projects</svelte:fragment>
+    <svelte:fragment slot="h2">Projets</svelte:fragment>
   </HeroHeader>
+  <!--
   <FeatureDefault>
     <a href="https://scikit-learn.org">
       <FeatureItem>
@@ -40,7 +41,7 @@
   </svelte:fragment>
       <svelte:fragment slot="h3">Scikit-Learn</svelte:fragment>
       <svelte:fragment slot="paragraph">
-        Core contributor to the popular machine learning library.
+        Popular machine learning library.
       </svelte:fragment>
     </FeatureItem>
     </a>
@@ -52,4 +53,5 @@
       </svelte:fragment>
     </FeatureItem>
   </FeatureDefault>
+  -->
 </Section>
