@@ -1,5 +1,6 @@
 <script lang="ts">
   import { withBase } from '../utils/path.ts';
+  import { siteConfig } from '../config/siteConfig';
   import {
     Navbar,
     NavBrand,
@@ -90,11 +91,10 @@
           activeClass="text-white bg-primary-200 md:bg-transparent text-[16px] font-extrabold hover:scale-105"
           nonActiveClass="md:text-secondary-200 text-[16px] font-bold hover:scale-105"
         >
-          <NavLi href="{withBase(``)}">Accueil</NavLi>
-          <NavLi href="{withBase(`blog`)}">Blog</NavLi>
-
-          <NavLi href="{withBase(`contact`)}">Contact</NavLi>
-          <NavLi href="https://github.com/nnosal" target="_blank">Github/nnosal</NavLi>
+        {#each siteConfig.navLinks as link}
+          <NavLi href={link.href}>{link.label}</NavLi>
+          <li><a href={link.href}>{link.label}</a></li>
+        {/each}
         </NavUl>
         <DarkMode btnClass="ml-4 text-white" size="lg" />
       </div>
@@ -108,11 +108,10 @@
         activeClass="text-white bg-primary-200 md:bg-transparent text-[16px] font-extrabold hover:scale-105"
         nonActiveClass="md:text-secondary-200 text-[16px] font-bold hover:scale-105"
       >
-        <NavLi href="{withBase(``)}">Accueil</NavLi>
-        <NavLi class="cursor-pointer" href="{withBase(`blog`)}">Blog</NavLi>
-
-        <NavLi href="{withBase(`about`)}">A propos</NavLi>
-        <!-- <NavLi href="{withBase(`contact`)}">Contact</NavLi> -->
+      {#each siteConfig.navLinks as link}
+        <NavLi href={link.href}>{link.label}</NavLi>
+        <li><a href={link.href}>{link.label}</a></li>
+      {/each}
       </NavUl>
     {/if}
   </Navbar>
