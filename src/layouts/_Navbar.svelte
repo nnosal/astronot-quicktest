@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { withBase } from '../utils/path.ts';
   import {
     Navbar,
     NavBrand,
@@ -89,8 +90,8 @@
           activeClass="text-white bg-primary-200 md:bg-transparent text-[16px] font-extrabold hover:scale-105"
           nonActiveClass="md:text-secondary-200 text-[16px] font-bold hover:scale-105"
         >
-          <NavLi href="/">Home</NavLi>
-          <NavLi href="/blog">Blog</NavLi>
+          <NavLi href="{withBase(``)}">Home</NavLi>
+          <NavLi href="{withBase(`blog`)}">Blog</NavLi>
 
           <NavLi href="/contact">Contact</NavLi>
           <NavLi href="https://github.com/weilinear" target="_blank"
