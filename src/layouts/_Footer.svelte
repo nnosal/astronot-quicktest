@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { withBase } from '../utils/path.ts';
   import { siteConfig } from '../config/siteConfig';
   import {
