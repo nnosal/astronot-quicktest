@@ -7,8 +7,8 @@ import remarkMath from 'remark-math';
 import rehypeMathjax from 'rehype-mathjax';
 
 export default defineConfig({
-	site: 'https://nnosal.github.io',
-	base: '/astronot-quicktest',
+	site: 'https://nnosal.github.io/astronot-quicktest',
+	base: '/',
 	//publicDir: 'static',
 	//outDir: 'public',
   integrations: [react(), tailwind(), mdx(), svelte()],
