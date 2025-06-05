@@ -36,7 +36,7 @@
   </HeroHeader>
   </div>
   <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-    <img src="{withBase(`/images/zurich_and_seattle_1.png`)}" alt="mockup" object-fit="cover" layout="fill" />
+    <img src="{withBase(`/images/quickview.jpg`)}" alt="cover" object-fit="cover" layout="fill" />
 
   </div>
 </Section>

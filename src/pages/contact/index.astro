@@ -1,4 +1,5 @@
 ---
+import { siteConfig } from '../../config/siteConfig';
 import Layout from "../../layouts/Layout.astro";
 import Contact from "./_Contact.svelte";
 import {
@@ -7,13 +8,41 @@ import {
   FeatureDefault,
   FeatureItem,
 } from "flowbite-svelte-blocks";
-import { MailBoxSolid, TwitterSolid, LinkedinSolid } from "flowbite-svelte-icons";
+import { MailBoxSolid, TwitterSolid, LinkedinSolid, GithubSolid, DiscordSolid, FacebookSolid } from "flowbite-svelte-icons";
+const iconMap = {
+    github: GithubSolid,
+    /*
+    linkedin: LinkedinSolid,
+    twitter: TwitterSolid,
+    discord: DiscordSolid,
+    facebook: FacebookSolid,
+    */
+} as const;
 ---
 
 <Layout title="Contact">
   <Section name="feature">
     <FeatureDefault>
-      <a href="mailto:weilinear@gmail.com">
+      {siteConfig.social.filter(link => link.icon === 'github').map((link) => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer"> {/* Added target/rel for external links */}
+          <FeatureItem>
+            {link.icon && iconMap[link.icon] && (
+              <svelte:fragment slot="icon">
+                <GithubSolid class="text-4xl" />
+                {/*
+                <svelte:component class="text-4xl" this={iconMap[link.icon]} />
+                */}
+              </svelte:fragment>
+            )}
+            <svelte:fragment slot="h3">{link.label}</svelte:fragment>
+            <svelte:fragment slot="paragraph">
+              {link.description || `Connect with me on ${link.label}.`}
+            </svelte:fragment>
+          </FeatureItem>
+        </a>
+      ))}
+  {/*
+      <a href="mailto:x@gmail.com">
         <FeatureItem>
           <svelte:fragment slot="icon">
             <MailBoxSolid class="text-4xl" />
@@ -24,7 +53,7 @@ import { MailBoxSolid, TwitterSolid, LinkedinSolid } from "flowbite-svelte-icons
           </svelte:fragment>
         </FeatureItem>
       </a>
-      <a href="https://twitter.com/weilinear">
+      <a href="https://twitter.com/x">
         <FeatureItem>
           <svelte:fragment slot="icon">
             <TwitterSolid class="text-4xl" />
@@ -35,7 +64,7 @@ import { MailBoxSolid, TwitterSolid, LinkedinSolid } from "flowbite-svelte-icons
           </svelte:fragment>
         </FeatureItem>
       </a>
-      <a href="https://www.linkedin.com/in/weilinear/">
+      <a href="https://www.linkedin.com/in/x/">
         <FeatureItem>
           <svelte:fragment slot="icon">
             <LinkedinSolid class="text-4xl" />
@@ -45,6 +74,7 @@ import { MailBoxSolid, TwitterSolid, LinkedinSolid } from "flowbite-svelte-icons
             Connect with me on LinkedIn.
           </svelte:fragment>
         </FeatureItem>
+  */}
     </FeatureDefault>
   </Section>
 </Layout>

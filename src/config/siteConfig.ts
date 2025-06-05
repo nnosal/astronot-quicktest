@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Un test avec Astro, Svelte, React & MDX",
   navLinks: [
     { label: "Accueil", href: withBase('') },
-    { label: "Articles", href: withBase('posts') },
+    { label: "Articles", href: withBase('blog') },
     //{ label: "À propos", href: withBase('about') },
     { label: "Contact", href: withBase('contact') },
     { label: "Github/nnosal", href: 'https://github.com/nnosal' }
