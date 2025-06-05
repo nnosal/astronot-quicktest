@@ -1,4 +1,5 @@
 ---
+import { siteConfig } from '../config/siteConfig';
 import Layout from "../layouts/Layout.astro";
 import Newsletter from "../components/Newsletter.svelte";
 import Features from "./home/_Features.svelte";
@@ -6,7 +7,7 @@ import FeatureHero from "./home/_FeatureHero.svelte";
 import LatestPosts from "../components/LatestPosts.astro";
 ---
 
-<Layout title="Wei Li's Homepage">
+<Layout title="{siteConfig.name} - Homepage">
   <main class="bg-transparent">
     <div class="w-full">
       <FeatureHero client:load />
