@@ -1,5 +1,6 @@
 <script>
   import { withBase } from '../utils/path.ts';
+  import { siteConfig } from '../config/siteConfig';
   import {
     Footer,
     FooterCopyright,
@@ -8,6 +9,7 @@
     FooterBrand,
     FooterIcon,
   } from "flowbite-svelte";
+
   import {
     FacebookSolid,
     GithubSolid,
@@ -15,6 +17,15 @@
     TwitterSolid,
     LinkedinSolid
   } from "flowbite-svelte-icons";
+  // Mappage local entre le nom d'icône et son composant
+  const iconMap = {
+    linkedin: LinkedinSolid,
+    twitter: TwitterSolid,
+    github: GithubSolid,
+    discord: DiscordSolid,
+    facebook: FacebookSolid,
+  } as const;
+
   import { navbar } from "../stores/layout";
 
   $: transluscent = $navbar.transluscent;
@@ -63,30 +74,16 @@
         </div>
 
         <div class="mt-4 flex items-center justify-center space-x-6 sm:mt-0">
-          <FooterIcon
-            href="https://linkedin.com/weilinear"
-            target="_blank"
-          >
-            <LinkedinSolid
-              class="h-4 w-4 text-gray-100 hover:scale-125 dark:text-gray-100 dark:hover:text-white"
-            />
-          </FooterIcon>
-          <FooterIcon
-            href="https://twitter.com/weilinear"
-            target="_blank"
-          >
-            <TwitterSolid
-              class="h-4 w-4 text-gray-100 hover:scale-125 dark:text-gray-100 dark:hover:text-white"
-            />
-          </FooterIcon>
-          <FooterIcon
-            href="https://github.com/weilinear"
-            target="_blank"
-          >
-            <GithubSolid
-              class="h-4 w-4 text-gray-100 hover:scale-125 dark:text-gray-100 dark:hover:text-white"
-            />
-          </FooterIcon>
+        {#each siteConfig.social as { href, icon }}
+          {#if iconMap[icon]}
+            <FooterIcon href={href} target="_blank">
+              <svelte:component
+                this={iconMap[icon]}
+                class="h-4 w-4 text-gray-100 hover:scale-125 dark:text-gray-100 dark:hover:text-white"
+              />
+            </FooterIcon>
+          {/if}
+        {/each}
         </div>
       </div>
     </Footer>

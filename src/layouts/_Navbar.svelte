@@ -93,7 +93,6 @@
         >
         {#each siteConfig.navLinks as link}
           <NavLi href={link.href}>{link.label}</NavLi>
-          <li><a href={link.href}>{link.label}</a></li>
         {/each}
         </NavUl>
         <DarkMode btnClass="ml-4 text-white" size="lg" />
@@ -110,7 +109,6 @@
       >
       {#each siteConfig.navLinks as link}
         <NavLi href={link.href}>{link.label}</NavLi>
-        <li><a href={link.href}>{link.label}</a></li>
       {/each}
       </NavUl>
     {/if}
