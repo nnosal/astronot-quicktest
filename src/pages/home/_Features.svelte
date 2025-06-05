@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { withBase } from '../utils/path.ts';
   import {
     Section,
     HeroHeader,
@@ -32,7 +33,7 @@
         <svelte:fragment slot="icon">
           <img
             alt="Google Scholar"
-            src="/images/scholar-logo.webp"
+            src="withBase(`images/scholar-logo.webp`)}"
             class="scale-[100%] !bg-none"
           />
         </svelte:fragment>

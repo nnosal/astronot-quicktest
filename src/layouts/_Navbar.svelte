@@ -69,9 +69,9 @@
       transluscent ? "dark:bg-primary-50 dark:bg-opacity-20" : ""
     }`}
   >
-    <NavBrand href="/">
+    <NavBrand href="{withBase(``)}">
       <img
-        src="/images/astronot-logo.webp"
+        src="{withBase(`images/astronot-logo.webp`)}"
         width="40"
         height="40"
         class="mr-3 aspect-square h-8 w-8 rounded-full sm:h-10 sm:w-10"
@@ -90,12 +90,12 @@
           activeClass="text-white bg-primary-200 md:bg-transparent text-[16px] font-extrabold hover:scale-105"
           nonActiveClass="md:text-secondary-200 text-[16px] font-bold hover:scale-105"
         >
-          <NavLi href="{withBase(``)}">Home</NavLi>
+          <NavLi href="{withBase(``)}">Accueil</NavLi>
           <NavLi href="{withBase(`blog`)}">Blog</NavLi>
 
-          <NavLi href="/contact">Contact</NavLi>
-          <NavLi href="https://github.com/weilinear" target="_blank"
-            >Github</NavLi
+          <NavLi href="{withBase(`contact`)">Contact</NavLi>
+          <NavLi href="https://github.com/nnosal" target="_blank"
+            >Github</nnosal
           >
         </NavUl>
         <DarkMode btnClass="ml-4 text-white" size="lg" />
@@ -110,11 +110,11 @@
         activeClass="text-white bg-primary-200 md:bg-transparent text-[16px] font-extrabold hover:scale-105"
         nonActiveClass="md:text-secondary-200 text-[16px] font-bold hover:scale-105"
       >
-        <NavLi href="/">Home</NavLi>
-        <NavLi class="cursor-pointer" href="/blog">Blog</NavLi>
+        <NavLi href="{withBase(``)}">Accueil</NavLi>
+        <NavLi class="cursor-pointer" href="{withBase(`blog`)}">Blog</NavLi>
 
-        <NavLi href="/about">About</NavLi>
-        <!-- <NavLi href="/contact">Contact</NavLi> -->
+        <NavLi href="{withBase(`about`)}">A propos</NavLi>
+        <!-- <NavLi href="{withBase(`contact`)}">Contact</NavLi> -->
       </NavUl>
     {/if}
   </Navbar>

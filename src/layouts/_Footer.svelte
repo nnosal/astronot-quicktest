@@ -1,4 +1,5 @@
 <script>
+  import { withBase } from '../utils/path.ts';
   import {
     Footer,
     FooterCopyright,
@@ -30,7 +31,7 @@
       >
         <div class="flex items-center justify-center">
           <img
-            src="/images/astronot-logo.webp"
+            src="{withBase(`images/astronot-logo.webp`)}"
             class="mr-3 h-8 w-8 rounded-full sm:h-10 sm:w-10"
             width="40"
             height="40"
