@@ -1,4 +1,5 @@
 <script>
+  import { withBase } from '../../utils/path';
   import { Section, HeroHeader } from "flowbite-svelte-blocks";
   import { Button, DeviceMockup } from "flowbite-svelte";
   import { ArrowRightOutline } from "flowbite-svelte-icons";
@@ -9,39 +10,26 @@
   <div class="mr-auto place-self-center lg:col-span-7">
     <HeroHeader h1Class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white" pClass="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
       <svelte:fragment slot="h1">
-        Me In a
+        Moi en
         <mark
           class="my-1 rounded bg-primary-50 px-2 py-0 text-white dark:bg-primary-700"
-          >Nutshell</mark
+          >quelques</mark
         >
         🌰
       </svelte:fragment>
       <svelte:fragment slot="paragraph">
         <div class="block">
-          <p>
-            I am currently working at <span class="text-primary-200">Google</span> as a Senior Staff Software Enginner with a focus on agent platform.
-            I was a Sr. Principal Applied Scientist at <span class="text-primary-200">Microsoft</span> working on LLMs for search.
-            I was staff research scientist and manager at <span class="text-primary-200">NewsBreak</span> (series C startup).
-            I was a senior research scientist at <span class="text-primary-200">Facebook</span> Seattle & <span class="text-primary-200">Google</span> Research
-            in Zurich, Switzerland with a focus on Computer Vision and Ads ranking.
+          <p>Développeur fullstack & DevOps, je travaille à mon compte depuis près plus de 10 ans, avec une orientation claire : aider les entreprises à se transformer et à scaler grâce au digital, en combinant technique, stratégie et pilotage.
           </p>
           &nbsp;
           <p>
-            I got my MPhil from The Chinese University of Hong Kong supervised
-            by Professor Xiaogang Wang. I was also a member of MMlab and
-            worked closely with Professor Xiaoou Tang. Before CUHK, I got my
-            bachelor from Tsinghua University, where I was a member of the Yao
-            Class. I did my bachelor thesis with Professor Changshui Zhang. I
-            also work with academia through university relationship. I worked
-            closely with ETH CVL led by Professor Luc Van Gool on
-            co-organizing Webvision challenge and workshop.
+          Je suis actuellement en formation pour devenir Chief Digital Officer (CDO), avec l’objectif d’accompagner des équipes, structurer des roadmaps digitales, et piloter des projets à fort impact — au-delà du code, dans une logique produit + business.
+          J’ai plusieurs années d’expérience sur des stacks modernes (Jamstack, serverless, CI/CD, cloud-native), en création ou refonte de plateformes orientées croissance, automation et performance. Aujourd’hui, je travaille sur des projets mêlant automatisation, marketing ciblé, et IA appliquée (RAG, copilotes métiers, etc.), avec un fort accent sur la création de valeur concrète et mesurable.
           </p>
           &nbsp;
           <p>
-            After my daytime research, I am a contributor to scikit-learn. A
-            Kaggle Master. Reviewer for computer vision journals and
-            conferences. A book lover, a DIYer and a traveler (30+ countries
-            and counting).
+            <b>Mon ambition</b> : être le pont entre équipes tech, métiers, et les enjeux de croissance.
+            En dehors des missions, je continue de contribuer à l’écosystème (open source, outils dev), et je garde du temps pour la lecture, les outils no-code, et quelques side-projects un peu fous. 🚀
           </p>
         </div>
       </svelte:fragment>

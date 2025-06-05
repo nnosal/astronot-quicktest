@@ -60,10 +60,9 @@
           <FooterLinkGroup
             ulClass="flex flex-row justify-center items-center my-2 text-secondary-200 font-semibold"
           >
-            <FooterLink href="/">Home</FooterLink>
-            <FooterLink href="/blog">Blog</FooterLink>
-            <FooterLink href="/about">About</FooterLink>
-            <FooterLink href="/contact">Contact</FooterLink>
+          {#each siteConfig.navLinks as link}
+            <FooterLink ref={link.href}>{link.label}</FooterLink>
+          {/each}
           </FooterLinkGroup>
           <FooterCopyright
             href="https://opensource.org/license/mit/"

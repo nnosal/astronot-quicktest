@@ -3,13 +3,19 @@ import { withBase } from '../utils/path.ts';
 import { Image, getImage } from "astro:assets";
 import { postImageImport } from "../helpers/images.mjs";
 
-const latestPosts = (await Astro.glob("../pages/posts/*.mdx"))
-  .sort(
-    (a: any, b: any) =>
-      new Date(b.frontmatter.publish_date) -
-      new Date(a.frontmatter.publish_date),
-  )
-  .slice(0, 4);
+let latestPosts = [];
+try {
+  latestPosts = (await Astro.glob("../pages/posts/*.mdx"))
+    .sort(
+      (a: any, b: any) =>
+        new Date(b.frontmatter.publish_date) -
+        new Date(a.frontmatter.publish_date),
+    )
+    .slice(0, 4);
+} catch (err) {
+  console.error('Erreur lors du chargement des fichiers MDX avec Astro.glob:', err);
+  //let posts = []; let latestPosts = [];
+}
 
 const { fullWidth = true, animated = false } = Astro.props;
 ---
@@ -24,7 +30,7 @@ const { fullWidth = true, animated = false } = Astro.props;
     <h2
       class="-mt-4 mb-8 pl-2 text-3xl font-bold text-gray-900 dark:text-white"
     >
-      Latest Blogs
+      Dernier(s) article(s) du Blog
     </h2>
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
       {

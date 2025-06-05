@@ -28,21 +28,6 @@
     <svelte:fragment slot="h2">Projects</svelte:fragment>
   </HeroHeader>
   <FeatureDefault>
-    <a href="https://scholar.google.com/citations?user=bG7pZHAAAAAJ&hl=en">
-      <FeatureItem>
-        <svelte:fragment slot="icon">
-          <img
-            alt="Google Scholar"
-            src="{withBase(`images/scholar-logo.webp`)}"
-            class="scale-[100%] !bg-none"
-          />
-        </svelte:fragment>
-        <svelte:fragment slot="h3">Publications</svelte:fragment>
-        <svelte:fragment slot="paragraph">
-          My publications on Google Scholar.
-        </svelte:fragment>
-      </FeatureItem>
-    </a>
     <a href="https://scikit-learn.org">
       <FeatureItem>
       <svelte:fragment slot="icon"
