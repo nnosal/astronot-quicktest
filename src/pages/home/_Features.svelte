@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { withBase } from '../utils/path.ts';
+  import { withBase } from '../../utils/path.ts';
   import {
     Section,
     HeroHeader,
