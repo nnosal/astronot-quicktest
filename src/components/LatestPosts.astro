@@ -65,7 +65,7 @@ const { fullWidth = true, animated = false } = Astro.props;
             <article class="max-w-xs">
               {cover && (
                 <>
-                  <a href={`/posts/${slug}`}>
+                  <a href={`./posts/${slug}`}>
                     <img
                       src={coverImageSrc}
                       class="mb-5 max-h-[127px] rounded-lg object-cover"
@@ -95,13 +95,13 @@ const { fullWidth = true, animated = false } = Astro.props;
                 }
               >
                 <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white ">
-                  <a href={`/posts/${slug}`}>{title}</a>
+                  <a href={`./posts/${slug}`}>{title}</a>
                 </h2>
                 <p class="mb-4 text-gray-500 dark:text-gray-400">
                   {(description !== "undefined" && description) || ""}
                 </p>
                 <a
-                  href={`/posts/${slug}`}
+                  href={`./posts/${slug}`}
                   class="inline-flex items-center font-medium text-primary-600 underline underline-offset-4 hover:no-underline dark:text-secondary-500"
                 >
                   Read in {reading_time.replace(" read", "")}
