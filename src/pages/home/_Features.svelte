@@ -33,7 +33,7 @@
         <svelte:fragment slot="icon">
           <img
             alt="Google Scholar"
-            src="withBase(`images/scholar-logo.webp`)}"
+            src="{withBase(`images/scholar-logo.webp`)}"
             class="scale-[100%] !bg-none"
           />
         </svelte:fragment>

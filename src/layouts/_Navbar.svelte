@@ -21,7 +21,7 @@
   let activeUrl: string = "";
   let innerWidth: number;
 
-  const name = "Wei Li"; // TODO: Make this a param, site config
+  const name = siteConfig.name;
 
   $: isHamburgerMenu = innerWidth < HAMBURGER_BREAKPOINT;
 
