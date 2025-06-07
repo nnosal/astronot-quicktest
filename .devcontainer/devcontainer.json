@@ -1,8 +1,4 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers-extra/features/mise:1": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,6 +8,6 @@
       ]
     }
   },
-  "postCreateCommand": "chmod +x ./mise && ./mise install",
-  "postStartCommand": "eval \"$(./mise activate --shims)\""
+  "postCreateCommand": "curl https://mise.run | MISE_INSTALL_PATH=/usr/local/bin/mise sh && /usr/local/bin/mise install",
+  "postStartCommand": "eval \"$(/usr/local/bin/mise activate --shims)\"",
 }
