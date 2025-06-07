@@ -9,7 +9,11 @@
         //"rgeraskin.mise",
 		    "astro-build.astro-vscode",
         "biomejs.biome"
-      ]
+      ],
+      "settings": {
+        "mise.binPath": "~/codespace/bin/mise",
+        "biome.configurationPath": "~/.local/share/mise/installs/biome/latest/biome"
+      }
     }
   },
   "postCreateCommand": "curl https://mise.run | MISE_INSTALL_PATH=~/bin/mise sh && ~/bin/mise trust -a && ~/bin/mise install",
