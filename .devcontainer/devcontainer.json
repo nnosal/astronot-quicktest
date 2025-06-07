@@ -13,6 +13,5 @@
     }
   },
   "postCreateCommand": "chmod +x ./mise && ./mise install",
-  "postStartCommand": "eval \"$(./mise activate --shims)\"",
-  "remoteUser": "vscode"
+  "postStartCommand": "eval \"$(./mise activate --shims)\""
 }
