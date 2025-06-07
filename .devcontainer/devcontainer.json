@@ -2,12 +2,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "tamasfe.even-better-toml",
         "hverlin.mise-vscode",
         //"rgeraskin.mise",
-		"astro-build.astro-vscode"
+		    "astro-build.astro-vscode",
+        "biomejs.biome"
       ]
     }
   },
-  "postCreateCommand": "curl https://mise.run | MISE_INSTALL_PATH=/usr/local/bin/mise sh && /usr/local/bin/mise install",
-  "postStartCommand": "eval \"$(/usr/local/bin/mise activate --shims)\"",
+  "postCreateCommand": "curl https://mise.run | MISE_INSTALL_PATH=~/bin/mise sh && ~/bin/mise trust -a && ~/bin/mise install",
+  "postStartCommand": "eval \"$(~/bin/mise activate --shims)\""
 }
