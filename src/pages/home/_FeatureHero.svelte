@@ -19,7 +19,7 @@
       </svelte:fragment>
       <svelte:fragment slot="paragraph">
         <div class="block">
-          <p>Développeur fullstack & DevOps, je travaille à mon compte depuis près plus de 10 ans, avec une orientation claire : aider les entreprises à se transformer et à scaler grâce au digital, en combinant technique, stratégie et pilotage.
+          <p>Développeur fullstack & DevOps, je travaille à mon compte depuis plus de 10 ans, avec une orientation claire : aider les entreprises à se transformer et à scaler grâce au digital, en combinant technique, stratégie et pilotage.
           </p>
           &nbsp;
           <p>

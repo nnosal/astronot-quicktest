@@ -1,0 +1,18 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/mise:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hverlin.mise-vscode",
+        //"rgeraskin.mise",
+		"astro-build.astro-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "chmod +x ./mise && ./mise install",
+  "postStartCommand": "eval \"$(./mise activate --shims)\"",
+  "remoteUser": "vscode"
+}
